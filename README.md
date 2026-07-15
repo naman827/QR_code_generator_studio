@@ -4,14 +4,16 @@
 
 **A production-styled QR code generation platform built with Python & Streamlit**
 
-<img src="screenshots\screencapture-localhost-8501-2026-07-15-15_47_29.png" alt="Enterprise QR Code Generator Studio — full application screenshot" width="800"/>
+<img src="screenshots/screencapture-localhost-8501-2026-07-15-15_47_29.png" alt="Enterprise QR Code Generator Studio — full application screenshot" width="800"/>
 
-[![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit%20Cloud-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)](https://qrcodegeneratorstudio-sb5rpvcde62uunaa9ueacz.streamlit.app/)
 [![Segno](https://img.shields.io/badge/QR%20Engine-Segno-2E7D32?style=flat-square)](https://pypi.org/project/segno/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](#license)
 [![Status](https://img.shields.io/badge/Status-Active-success?style=flat-square)]()
 
 [Overview](#overview) • [Features](#features) • [Tech Stack](#tech-stack) • [Getting Started](#getting-started) • [Usage](#usage) • [Project Structure](#project-structure) • [Roadmap](#roadmap)
+
+**🔗 [Try it live](https://qrcodegeneratorstudio-sb5rpvcde62uunaa9ueacz.streamlit.app/)**
 
 </div>
 
@@ -25,6 +27,8 @@ The project was built to demonstrate practical skills in **rapid UI prototyping 
 
 > 💡 Enter a URL or text string → tune the output parameters → generate and download a print-ready PNG in seconds.
 
+> 🌐 **Live app:** https://qrcodegeneratorstudio-sb5rpvcde62uunaa9ueacz.streamlit.app/
+
 ## Features
 
 - 🔗 **Universal Payload Support** — Encode any website URL or free-form text into a scannable QR matrix.
@@ -37,12 +41,12 @@ The project was built to demonstrate practical skills in **rapid UI prototyping 
 - ⚠️ **Graceful Failsafe Handling** — Input validation and exception handling prevent silent failures during encoding.
 
 <div align="center">
-<img src="screenshots\image.png" alt="Sidebar configuration panel screenshot" width="400"/>
+<img src="screenshots/image.png" alt="Sidebar configuration panel screenshot" width="400"/>
 <p><em>Sidebar configuration panel — resolution, quiet zone, color pickers, and ECC level in one place.</em></p>
 </div>
 
 <div align="center">
-<img src="screenshots\image2.png" alt="Custom colored QR code output screenshot" width="400"/>
+<img src="screenshots/image2.png" alt="Custom colored QR code output screenshot" width="400"/>
 <p><em>Custom color palette applied to a generated QR code.</em></p>
 </div>
 
@@ -55,6 +59,7 @@ The project was built to demonstrate practical skills in **rapid UI prototyping 
 | QR Encoding Engine | [Segno](https://pypi.org/project/segno/) |
 | Image Handling | Python `io` (in-memory byte buffers) |
 | File System | `pathlib` |
+| Deployment | Streamlit Community Cloud |
 
 ## Getting Started
 
@@ -75,13 +80,15 @@ python -m venv venv
 source venv/bin/activate      # On Windows: venv\Scripts\activate
 
 # 3. Install dependencies
-pip install streamlit segno
+pip install -r requirements.txt
 
 # 4. Run the app
 streamlit run main.py
 ```
 
 The app will launch in your browser at `http://localhost:8501`.
+
+> Prefer not to install anything? **[Use the live hosted version here.](https://qrcodegeneratorstudio-sb5rpvcde62uunaa9ueacz.streamlit.app/)**
 
 ## Usage
 
@@ -95,14 +102,14 @@ The app will launch in your browser at `http://localhost:8501`.
 4. Click **Download (.png)** to save the asset locally.
 
 <div align="center">
-<img src="screenshots\image3.png" alt="Generated QR code output and download button screenshot" width="500"/>
+<img src="screenshots/image3.png" alt="Generated QR code output and download button screenshot" width="500"/>
 <p><em>Generated output viewport with matrix version/mode caption and download button.</em></p>
 </div>
 
 5. Expand **View Code Structural Telemetry** to inspect the underlying matrix version, encoding mode, and configuration as JSON.
 
 <div align="center">
-<img src="screenshots\image2.png" alt="Structural telemetry JSON panel screenshot" width="500"/>
+<img src="screenshots/image2.png" alt="Structural telemetry JSON panel screenshot" width="500"/>
 <p><em>Structural telemetry panel — matrix version, ECC level, and color mapping exposed as JSON.</em></p>
 </div>
 
@@ -110,14 +117,15 @@ The app will launch in your browser at `http://localhost:8501`.
 
 ```
 QR_code_generator_studio/
+├── screenshots/
+│   ├── screencapture-localhost-8501-2026-07-15-15_47_29.png   # Full app screenshot
+│   ├── image.png                                               # Sidebar configuration screenshot
+│   ├── image2.png                                              # Color customization / telemetry screenshot
+│   └── image3.png                                              # Output viewport + download screenshot
 ├── assets/
-│   ├── logo.png                  # App icon
-│   ├── hero.png                  # Full app screenshot
-│   ├── sidebar-config.png        # Sidebar configuration screenshot
-│   ├── color-customization.png   # Custom color output screenshot
-│   ├── output-download.png       # Output viewport + download screenshot
-│   └── telemetry-panel.png       # Structural telemetry panel screenshot
-├── main.py           # Streamlit application entry point
+│   └── logo.png       # App icon
+├── main.py             # Streamlit application entry point
+├── requirements.txt    # Python dependencies
 ├── .gitignore
 └── README.md
 ```
@@ -142,5 +150,5 @@ GitHub: [@naman827](https://github.com/naman827)
 ---
 
 <div align="center">
-<sub>Built with Python & Streamlit</sub>
+<sub>Built with Python & Streamlit</sub> · <a href="https://qrcodegeneratorstudio-sb5rpvcde62uunaa9ueacz.streamlit.app/">Live Demo</a>
 </div>
